@@ -1,0 +1,16 @@
+labeler,repo,revision,backend,machine
+rule,verdict regex (code/eegrl/text.py),git:2c709ea,python,local
+tfidf,sklearn TF-IDF+LR,git:35c6a71,python,local
+kev-4b,jaredpalmer/kev-4b (base Qwen/Qwen3.5-4B-Base; kev repo 0fe8fc97c2bcc247fa3efb6e5c32af4e99770e91),139fdd94f1b6a6ad80cc15e08fcb99cac885a101,kev.serve mlx bf16 T=2.406,Apple silicon workstation 128 GB (1)
+laya-en,convaiinnovations/laya english (laya 0.3.21),pip laya 0.3.21,torch mps,Apple silicon workstation 128 GB (2)
+laya-multi,convaiinnovations/laya multilingual (laya 0.3.21),pip laya 0.3.21,torch mps,Apple silicon workstation 128 GB (2)
+kev-0.8b,jaredpalmer/kev-0.8b (base Qwen/Qwen3.5-0.8B-Base),9a45d25eb2ab761841196625383fa1dff0e56c1e,kev.serve mlx bf16 T=2.351 (head.pt),Apple silicon workstation 128 GB (1)
+kev-9b,jaredpalmer/kev-9b (base Qwen/Qwen3.5-9B-Base),2629c06a5aeb0feb3b9783bafed17ed8f39ecf5c,kev.serve torch cuda bf16 T=2.297 (head.pt),NVIDIA DGX Spark (GB10)
+kev-9b-findings,jaredpalmer/kev-9b (base Qwen/Qwen3.5-9B-Base),b5d8c18e44c60888d138b65cb6507ff0a5a448a0,kev.serve mlx bf16 T=2.194 (head.pt),Apple silicon workstation 128 GB (1) + Apple silicon workstation 128 GB (2) (2 shards)
+kev-27b,jaredpalmer/kev-27b (base Qwen/Qwen3.8-27B@1d4bf0f; merged interpolation alpha 0.85),ef78cc8a34d5f426fb229c52089db189218cfe5c,kev.serve torch cuda bf16 T=1.320 (head.pt),NVIDIA DGX Spark (GB10) (pinned rerun)
+gemma4-e4b,google/gemma-4-E4B-it,ee0ef6023621cff504d758262d4e04895a5af4a2,vLLM 0.29 bf16,NVIDIA DGX Spark (GB10)
+gemma4-12b,google/gemma-4-12B-it,707f0a3b8a3c7ad586ed01e27eafbad8a27dd0f7,vLLM 0.29 bf16,NVIDIA DGX Spark (GB10)
+qwen38-27b,Qwen/Qwen3.8-27B-FP8,017b9c7af6b5689d5dd426a76e0bc077eb5ca20a,vLLM 0.29 FP8,NVIDIA DGX Spark (GB10)
+nli-deberta,MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli,b3546ea6b0346eb6f8d5d68b13c7dc6d0376b3d7,transformers,NVIDIA DGX Spark (GB10)
+clinicalbert,emilyalsentzer/Bio_ClinicalBERT,d5892b39a4adaed74b92212a44081509db72f87b,transformers fine-tuned,Apple silicon workstation 32 GB
+laya,convaiinnovations/laya,55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851,laya 0.3.21,Apple silicon workstation 128 GB (2) / NVIDIA DGX Spark (GB10)

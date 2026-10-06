@@ -1,0 +1,18 @@
+[project]
+name = "eegrl"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["pandas", "pyarrow", "numpy", "scipy", "scikit-learn", "statsmodels", "matplotlib", "requests", "tqdm", "joblib"]
+[project.optional-dependencies]
+test = ["pytest"]
+# model labelers (versions used in the study); Kev models run on the developer's inference server (model_manifest.csv)
+models = ["torch==2.14.0", "transformers==5.17.0", "laya==0.3.21"]
+mlx = ["mlx-lm==0.31.3"]
+vllm = ["vllm>=0.29,<0.30"]
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+[tool.setuptools.packages.find]
+include = ["eegrl*"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
